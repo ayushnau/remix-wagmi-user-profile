@@ -1,38 +1,12 @@
-# Welcome to Remix!
+# Setup Instructions
 
-- [Remix Docs](https://remix.run/docs)
+1. **Install Dependencies**: Run `npm install` to install the required packages for your project.
 
-## Development
+2. **Install MetaMask**: Ensure you have the MetaMask extension installed in your browser. You can download it from [MetaMask's official website](https://metamask.io/download.html).
 
-From your terminal:
+3. **Configure Test Network**: Open MetaMask and switch to the Sepolia test network.
 
-```sh
-npm run dev
-```
+4. **Obtain Test Ether**: Visit [Chainlink Faucet](https://faucets.chain.link/) to request test ether for the Sepolia network. Follow the instructions on the faucet website to receive your test funds.
 
-This starts your app in development mode, rebuilding assets on file changes.
+5. **Ready to Go**: You are now set up and ready to use the test network.
 
-## Deployment
-
-First, build your app for production:
-
-```sh
-npm run build
-```
-
-Then run the app in production mode:
-
-```sh
-npm start
-```
-
-Now you'll need to pick a host to deploy it to.
-
-### DIY
-
-If you're familiar with deploying node applications, the built-in Remix app server is production-ready.
-
-Make sure to deploy the output of `remix build`
-
-- `build/server`
-- `build/client`

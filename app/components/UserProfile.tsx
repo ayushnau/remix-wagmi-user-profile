@@ -9,12 +9,12 @@ interface UserProfileTypes {
 
 const UserProfile: React.FC<UserProfileTypes> = ({ user }) => {
   return (
-    <div className="d-flex flex-column flex-md-row">
+    <div className="d-flex flex-column flex-md-row z-4 position-relative">
       <div className="flex-fill mb-4 mb-md-0">
         <UserDetailsCard user={user} />
       </div>
       <div
-        className="flex-fill"
+        className="flex-fill position-relative z-1"
         style={{
           maxHeight: "calc(100vh - 4rem)", // Adjust based on header/footer height
           overflowY: "auto",

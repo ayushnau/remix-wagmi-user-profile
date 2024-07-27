@@ -8,7 +8,7 @@ interface NavbarTypes {
 
 const Header: React.FC<NavbarTypes> = ({ user }) => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm sticky-top bg-gradient shadow-lg">
+    <nav className="z-5 navbar navbar-expand-lg navbar-dark bg-dark shadow-sm sticky-top bg-gradient shadow-lg">
       <div className="container-fluid">
         <Link className="navbar-brand d-lg-none" to="/">
           ProfileHub

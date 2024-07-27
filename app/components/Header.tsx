@@ -1,54 +1,63 @@
 import React from "react";
+import { Link } from "@remix-run/react";
 import { User } from "../types/user";
 
 interface NavbarTypes {
   user: User;
 }
+
 const Header: React.FC<NavbarTypes> = ({ user }) => {
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm sticky-top bg-gradient shadow-lg">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
+        {/* Always show brand name on all screens */}
+        <Link className="navbar-brand d-lg-none" to="/">
           ProfileHub
-        </a>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarTogglerDemo02"
-          aria-controls="navbarTogglerDemo02"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
-                Home
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Messages
-              </a>
-            </li>
-          </ul>
+        </Link>
 
-          <div className="navbar-nav mx-2">
-            <div className="nav-item mx-2">
-              <img
-                src={user.profilePicture}
-                alt="User"
-                className="rounded-circle"
-                style={{ width: "100px", height: "100px" }}
-              />
-            </div>
-            <div className="nav-item d-flex align-items-center fw-bold">
-              {user.name}
+        {/* Button and links (hidden on small screens) */}
+        <div className="d-none d-lg-flex w-100 justify-content-between">
+          <Link className="navbar-brand" to="/">
+            ProfileHub
+          </Link>
+          <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              <li className="nav-item">
+                <Link className="nav-link active" aria-current="page" to="/">
+                  Home
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/">
+                  Messages
+                </Link>
+              </li>
+            </ul>
+            <div className="d-flex align-items-center ms-auto">
+              <div className="me-3">
+                <img
+                  src={user.profilePicture}
+                  alt="User"
+                  className="rounded-circle"
+                  style={{ width: "40px", height: "40px" }}
+                />
+              </div>
+              <div className="text-light fw-bold">{user.name}</div>
             </div>
           </div>
+        </div>
+
+        {/* Only show image and text on small screens */}
+        <div className="d-lg-none d-flex align-items-center ms-auto">
+          <div className="me-3">
+            <img
+              src={user.profilePicture}
+              alt="User"
+              className="rounded-circle"
+              style={{ width: "40px", height: "40px" }}
+            />
+          </div>
+          <div className="text-light fw-bold">{user.name}</div>
         </div>
       </div>
     </nav>

@@ -37,5 +37,23 @@ export const userData = {
       description:
         "Initiated a new project on 'AI for Healthcare' aiming to improve patient outcomes through artificial intelligence.",
     },
+    {
+      title: "Attended a tech conference",
+      date: "2024-07-15",
+      description:
+        "Participated in the 'Future of Tech' conference to explore emerging technologies and network with industry leaders.",
+    },
+    {
+      title: "Released a new app update",
+      date: "2024-07-20",
+      description:
+        "Launched a major update for the 'GraphicPro' app, adding new features and improving user experience.",
+    },
+    {
+      title: "Hosted a webinar on digital art",
+      date: "2024-07-25",
+      description:
+        "Conducted an engaging webinar on creating digital artwork, sharing techniques and insights with aspiring artists.",
+    },
   ],
 };

@@ -1,3 +1,7 @@
+  html, body{
+    height: 100vh
+  }
+  
   .animate-card {
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
   }
@@ -6,3 +10,13 @@
     transform: translateY(-5px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
+
+  /* Add this to your global CSS or a dedicated CSS module */
+
+.bg-gradient {
+  background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.6) 100%);
+}
+
+.shadow-lg {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+}

@@ -10,3 +10,5 @@
 
 5. **Ready to Go**: You are now set up and ready to use the test network.
 
+
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=TdtkNmrfHQU" frameborder="0" allowfullscreen></iframe>"

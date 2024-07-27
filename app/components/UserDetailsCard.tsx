@@ -8,7 +8,6 @@ import {
   faInstagram,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
-import "../styles/ProfileCard.css";
 
 interface UserDetailsCardType {
   user: User;
@@ -49,7 +48,7 @@ const UserDetailsCard: React.FC<UserDetailsCardType> = ({ user }) => {
       </div>
 
       {/* Contact Information Card */}
-      <div className="card p-3 mt-4 rounded-3 shadow-sm w-100 contact-card">
+      <div className="card p-3 mt-4 rounded-3 shadow-sm w-100 animate-card">
         <h5 className="mb-3">Contact Information</h5>
         <div className="d-flex flex-column flex-md-row align-items-start text-center mb-3 text-nowrap">
           <div className="d-flex align-items-center mb-2 mb-md-0 me-md-3">

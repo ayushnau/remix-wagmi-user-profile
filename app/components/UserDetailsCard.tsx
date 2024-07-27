@@ -9,7 +9,6 @@ import {
   faInstagram,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
-import ToastMessage from "./ToastMessage";
 
 interface UserDetailsCardType {
   user: User;

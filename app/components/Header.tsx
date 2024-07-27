@@ -10,12 +10,10 @@ const Header: React.FC<NavbarTypes> = ({ user }) => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm sticky-top bg-gradient shadow-lg">
       <div className="container-fluid">
-        {/* Always show brand name on all screens */}
         <Link className="navbar-brand d-lg-none" to="/">
           ProfileHub
         </Link>
 
-        {/* Button and links (hidden on small screens) */}
         <div className="d-none d-lg-flex w-100 justify-content-between">
           <Link className="navbar-brand" to="/">
             ProfileHub
@@ -47,7 +45,6 @@ const Header: React.FC<NavbarTypes> = ({ user }) => {
           </div>
         </div>
 
-        {/* Only show image and text on small screens */}
         <div className="d-lg-none d-flex align-items-center ms-auto">
           <div className="me-3">
             <img

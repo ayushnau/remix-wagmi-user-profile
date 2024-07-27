@@ -9,7 +9,9 @@ interface UserActivitiesTypes {
 const UserActivities: React.FC<UserActivitiesTypes> = ({ activities }) => {
   return (
     <div className="container p-4">
-      <h2 className="mb-4">Recent Activities</h2>
+      <h2 className="mb-4 sticky-top bg-white px-3 py-4 rounded-xl">
+        Recent Activities
+      </h2>
       <div className="overflow-auto">
         <Row className="g-4">
           {activities.map((activity: Activity, index: any) => (

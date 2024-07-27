@@ -18,14 +18,14 @@ const ToastMessage: React.FC<ToastMessageProps> = ({
 
   return (
     <ToastContainer
-      className="p-3 end-0" // Adjusted for fixed positioning
-      style={{ zIndex: 1050, position: "fixed", bottom: 0, right: 0 }} // Ensures toast appears above other content
+      className="p-3 end-0"
+      style={{ zIndex: 1050, position: "fixed", bottom: 0, right: 0 }}
     >
       <Toast
         show={show}
         onClose={handleClose}
         autohide
-        delay={3000} // Auto-hide after 3 seconds
+        delay={3000}
         className="text-light bg-danger border-0 rounded"
       >
         <Toast.Header>

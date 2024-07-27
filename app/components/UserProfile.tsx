@@ -6,24 +6,24 @@ import UserActivities from "./UserActivities";
 interface UserProfileTypes {
   user: User;
 }
+
 const UserProfile: React.FC<UserProfileTypes> = ({ user }) => {
   return (
-    <div className="d-flex flex-column  flex-md-row ">
-      <UserDetailsCard user={user} />
-      <UserActivities activities={user.activities} />
+    <div className="d-flex flex-column flex-md-row">
+      <div className="flex-fill mb-4 mb-md-0">
+        <UserDetailsCard user={user} />
+      </div>
+      <div
+        className="flex-fill"
+        style={{
+          maxHeight: "calc(100vh - 4rem)", // Adjust based on header/footer height
+          overflowY: "auto",
+        }}
+      >
+        <UserActivities activities={user.activities} />
+      </div>
     </div>
   );
 };
 
 export default UserProfile;
-
-{
-  /* <div className="d-flex flex-column flex-md-row">
-  <div className="flex-fill mb-4 mb-md-0">
-    <UserDetailsCard user={user} />
-  </div>
-  <div className="flex-fill">
-    <UserActivities activities={user.activities} />
-  </div>
-</div>; */
-}

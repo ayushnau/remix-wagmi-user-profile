@@ -1,12 +1,12 @@
 // app/types/user.ts
 
-export type Activity = {
+export interface Activity  {
     title: string;
     date: string;
     description: string;
   };
   
-  export type User = {
+  export interface User  {
     name: string;
     userTag: string
     accountAddress: string
@@ -17,3 +17,8 @@ export type Activity = {
     activities: Activity[];
   };
   
+  export interface ToastMessage {
+    show: boolean;
+    setShow: React.Dispatch<React.SetStateAction<boolean>>;
+    message: string;
+  }

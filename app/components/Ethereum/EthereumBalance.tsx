@@ -4,13 +4,14 @@ import { useAccount, useBalance, useConnect, useDisconnect } from "wagmi";
 import { mainnet, sepolia } from "wagmi/chains";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWallet, faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
-import ToastMessage from "../ToastMessage";
 
-const EthereumBalance: React.FC = () => {
+interface EthereumBalanceType {
+  setShowError: React.Dispatch<React.SetStateAction<boolean>>;
+}
+const EthereumBalance: React.FC<EthereumBalanceType> = ({ setShowError }) => {
   const { address, isConnected } = useAccount();
   const { connect, connectors, error } = useConnect();
   const { disconnect } = useDisconnect();
-  const [showError, setShowError] = useState(false);
 
   // hard coded this. for checking for your wallet address simply replace remove the address.
   const { data, isError, isLoading } = useBalance({
@@ -24,7 +25,7 @@ const EthereumBalance: React.FC = () => {
   }, [error, isError]);
 
   return (
-    <div className="card p-4 mt-4 w-100 rounded-3 shadow-sm animate-card">
+    <div className="card p-4 mt-4 w-100 rounded-3 shadow-sm animate-card position-relative">
       {!isConnected ? (
         <>
           <h5 className="mb-3">Connect to Ethereum Wallet</h5>
@@ -63,11 +64,6 @@ const EthereumBalance: React.FC = () => {
           </div>
         </>
       )}
-      <ToastMessage
-        show={showError}
-        setShow={setShowError}
-        message={"Something Went Wrong!"}
-      />
     </div>
   );
 };

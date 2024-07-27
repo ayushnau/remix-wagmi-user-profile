@@ -12,12 +12,15 @@ import {
 
 interface UserDetailsCardType {
   user: User;
+  setShowError: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const UserDetailsCard: React.FC<UserDetailsCardType> = ({ user }) => {
+const UserDetailsCard: React.FC<UserDetailsCardType> = ({
+  user,
+  setShowError,
+}) => {
   return (
     <div
-      // className="container mt-4 mb-4 p-3 d-flex justify-content-center flex-column align-items-start"
       className="container mt-4 mb-4 p-3 d-flex flex-column align-items-start"
       style={{ maxWidth: "400px", boxSizing: "content-box" }}
     >
@@ -48,7 +51,6 @@ const UserDetailsCard: React.FC<UserDetailsCardType> = ({ user }) => {
           <button className="btn btn-dark w-100 mb-4">Edit Profile</button>
         </div>
       </div>
-      {/* Contact Information Card */}
       <div className="card p-3 mt-4 rounded-3 shadow-sm w-100 animate-card">
         <h5 className="mb-3">Contact: </h5>
         <div className="d-flex flex-column flex-md-row align-items-start text-center mb-3 text-nowrap">
@@ -62,7 +64,7 @@ const UserDetailsCard: React.FC<UserDetailsCardType> = ({ user }) => {
           </div>
         </div>
       </div>
-      <EthereumBalance />
+      <EthereumBalance setShowError={setShowError} />
     </div>
   );
 };

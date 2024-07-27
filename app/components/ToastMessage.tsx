@@ -1,24 +1,14 @@
 import React from "react";
-import Button from "react-bootstrap/Button";
 import Toast from "react-bootstrap/Toast";
 import ToastContainer from "react-bootstrap/ToastContainer";
+import { ToastMessage } from "~/types/user";
 
-interface ToastMessageProps {
-  show: boolean;
-  setShow: React.Dispatch<React.SetStateAction<boolean>>;
-  message: string;
-}
-
-const ToastMessage: React.FC<ToastMessageProps> = ({
-  show,
-  setShow,
-  message,
-}) => {
+const ToastMessage: React.FC<ToastMessage> = ({ show, setShow, message }) => {
   const handleClose = () => setShow(false);
 
   return (
     <ToastContainer
-      className="p-3 end-0"
+      className="p-3"
       style={{ zIndex: 1050, position: "fixed", bottom: 0, right: 0 }}
     >
       <Toast
